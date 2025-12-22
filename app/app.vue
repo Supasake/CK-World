@@ -1,11 +1,19 @@
 <template>
   <div>
-    <NuxtPage />
-
-    dcddcd
-
-    <div>dvfvfv fvfvfv 1231</div>
-    <h1>1231</h1>
-    n 1111
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
+
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.5s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+</style>
