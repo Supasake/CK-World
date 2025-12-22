@@ -38,6 +38,7 @@
               <AppLanguage /> <AppColorMode />
             </div>
           </div>
+
           <ul class="space-y-4">
             <div class="divider mb-2" />
             <li v-for="(item, index) in items" :key="index">
@@ -54,20 +55,33 @@
 </template>
 
 <script setup>
-const items = computed(() => [
-  { label: "Home", to: "/", icon: "solar:home-bold-duotone" },
-  {
-    label: "Check Price",
-    to: "/#check_price",
-    icon: "solar:chat-round-money-bold-duotone",
-  },
-  { label: "Blog", to: "/#blog", icon: "solar:notebook-bookmark-line-duotone" },
-  {
-    label: "Contact us",
-    to: "/#contact_us",
-    icon: "solar:mailbox-bold-duotone",
-  },
-]);
+const { locale } = useI18n();
+
+const items = computed(() => {
+  const loc = locale.value;
+  return [
+    {
+      label: "Home",
+      to: `/${loc == "en" ? "" : loc}`,
+      icon: "solar:home-bold-duotone",
+    },
+    {
+      label: "Check Price",
+      to: `/${loc == "en" ? "" : loc}#check_price`,
+      icon: "solar:chat-round-money-bold-duotone",
+    },
+    {
+      label: "Blog",
+      to: `/${loc == "en" ? "" : loc}#blog`,
+      icon: "solar:notebook-bookmark-line-duotone",
+    },
+    {
+      label: "Contact us",
+      to: `/${loc == "en" ? "" : loc}#contact_us`,
+      icon: "solar:mailbox-bold-duotone",
+    },
+  ];
+});
 </script>
 
 <style scoped></style>

@@ -46,9 +46,12 @@
     <div class="grid grid-cols-2 gap-6 sm:flex sm:w-full justify-evenly">
       <nav class="flex flex-col gap-2">
         <h6 class="footer-title">Our Services</h6>
-        <NuxtLink class="link link-hover" to="/#blog">Blog</NuxtLink>
-        <NuxtLink class="link link-hover" to="/#contact_us"
-          >Contact Us</NuxtLink
+        <NuxtLink
+          v-for="item in items"
+          :key="item.label"
+          class="link link-hover"
+          :to="item.to"
+          >{{ item.label }}</NuxtLink
         >
       </nav>
       <!-- <nav class="flex flex-col gap-2">
@@ -122,6 +125,34 @@
   </footer>
 </template>
 
-<script setup></script>
+<script setup>
+const { locale } = useI18n();
+
+const items = computed(() => {
+  const loc = locale.value;
+  return [
+    {
+      label: "Home",
+      to: `/${loc == "en" ? "" : loc}`,
+      icon: "solar:home-bold-duotone",
+    },
+    {
+      label: "Check Price",
+      to: `/${loc == "en" ? "" : loc}#check_price`,
+      icon: "solar:chat-round-money-bold-duotone",
+    },
+    {
+      label: "Blog",
+      to: `/${loc == "en" ? "" : loc}#blog`,
+      icon: "solar:notebook-bookmark-line-duotone",
+    },
+    {
+      label: "Contact us",
+      to: `/${loc == "en" ? "" : loc}#contact_us`,
+      icon: "solar:mailbox-bold-duotone",
+    },
+  ];
+});
+</script>
 
 <style lang="scss" scoped></style>

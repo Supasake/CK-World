@@ -22,14 +22,10 @@
         >
           <figure
             :class="{
-              'h-[300px]': row.cols === 2,
-              'h-[180px]': row.cols === 3,
+              'h-75': row.cols === 2,
+              'h-45': row.cols === 3,
             }"
           >
-            <!-- :class="{
-                 h-[200px]: row.cols === 2,
-                300: row.cols === 3,
-              }"  -->
             <NuxtImg
               :src="card.image"
               alt="img"

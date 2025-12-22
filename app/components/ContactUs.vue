@@ -1,6 +1,6 @@
 <template>
   <div id="contact_us">
-    <section class="py-12 px-4 max-w-7xl mx-auto">
+    <section class="py-8 px-4 max-w-7xl mx-auto">
       <!-- Header -->
       <div class="text-center my-12">
         <h1 class="text-5xl font-bold text-primary mb-6">Contact Us</h1>
