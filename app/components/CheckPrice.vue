@@ -27,7 +27,7 @@
             <div class="text-center mb-10">
               <h2
                 id="check_price"
-                class="text-4xl font-bold text-primary scroll-mt-55"
+                class="text-4xl font-bold text-primary scroll-mt-30 md:scroll-mt-55"
               >
                 Check Shipping Price
               </h2>
@@ -92,7 +92,7 @@
                       type="number"
                       min="0.1"
                       step="0.1"
-                      placeholder="Width (cm.)"
+                      placeholder="Width"
                       class="input text-center font-bold"
                       required
                     />
@@ -104,7 +104,7 @@
                       type="number"
                       min="0.1"
                       step="0.1"
-                      placeholder="Height (cm.)"
+                      placeholder="Height"
                       class="input text-center font-bold"
                       required
                     />
@@ -116,7 +116,7 @@
                       type="number"
                       min="0.1"
                       step="0.1"
-                      placeholder="Length (cm.)"
+                      placeholder="Length"
                       class="input text-center font-bold"
                       required
                     />

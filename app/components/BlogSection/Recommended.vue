@@ -22,7 +22,7 @@
         >
           <figure
             :class="{
-              'h-75': row.cols === 2,
+              'h:100 md:h-75': row.cols === 2,
               'h-45': row.cols === 3,
             }"
           >
