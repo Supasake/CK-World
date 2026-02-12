@@ -26,6 +26,79 @@
 
       <div class="relative container mx-auto px-4 sm:px-6 lg:px-8 min-h-200 flex items-center">
         <div class="w-full grid lg:grid-cols-2 gap-12 lg:gap-20 items-center py-20">
+          <div class="relative animate-fade-right">
+            <!-- Main Image Card -->
+            <div class="relative z-20">
+              <!-- Floating Badge - ISO -->
+              <!-- <div
+                                class="absolute -top-6 -right-6 z-30 bg-linear-to-r from-yellow-500 to-amber-600 rounded-2xl p-4 shadow-2xl animate-float-slow">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
+                                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M5 13l4 4L19 7" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <div class="text-2xl font-bold text-white">ISO 9001</div>
+                                        <div class="text-xs text-yellow-100">Certified</div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+              <!-- Main Image -->
+              <!-- <div class="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 group"
+                                @mousemove="handleMouseMove" @mouseleave="mouseRotate = 0">
+                                <NuxtImg src="/img/hero-showcase.jpg"
+                                    class="w-full h-125 object-cover transform transition-transform duration-10000 group-hover:scale-110" />
+                                <div
+                                    class="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent" />
+                                <div class="absolute bottom-6 left-6 right-6">
+                                    <div class="bg-black/50 backdrop-blur-md rounded-xl p-4 border border-white/10">
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                                                <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M9 12l2 2 4-5m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <div class="text-white font-semibold">เรือขนส่งสินค้าที่ทันสมัย</div>
+                                                <div class="text-sm text-gray-300">พร้อมบริการตลอด 24 ชั่วโมง</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+
+              <!-- Stats Card Floating -->
+              <!-- <div
+                                class="absolute -bottom-8 -right-8 z-30 bg-linear-to-br from-gray-800 to-gray-900 backdrop-blur-xl rounded-2xl p-5 border border-white/10 shadow-2xl animate-float">
+                                <div class="flex items-center gap-4">
+                                    <div
+                                        class="w-14 h-14 bg-linear-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">
+                                        <span class="text-2xl font-bold text-white">{{ displayShips }}+</span>
+                                    </div>
+                                    <div>
+                                        <div class="text-white font-semibold">เรือขนส่ง</div>
+                                        <div class="text-sm text-gray-400">ทั่วทุกทวีป</div>
+                                    </div>
+                                </div>
+                            </div> -->
+            </div>
+
+            <!-- Trust Badges -->
+            <!-- <div class="flex items-center gap-6 mt-16 ml-4">
+                            <div v-for="i in 4" :key="i"
+                                class="w-12 h-12 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 flex items-center justify-center hover:bg-white/10 transition-colors">
+                                <NuxtImg :src="`/img/partner-${i}.png`" class="w-8 h-8 object-contain opacity-70" />
+                            </div>
+                        </div> -->
+          </div>
           <div class="relative space-y-8 animate-fade-left">
             <div
               class="inline-flex items-center gap-2 bg-linear-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-3xl border border-cyan-500/30 rounded-full px-5 py-2.5"
