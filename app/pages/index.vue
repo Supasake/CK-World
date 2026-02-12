@@ -1,12 +1,11 @@
 <template>
   <div>
-    <div class="min-h-screen mt-20">
+    <div class="min-h-screen mt-26">
       <HeroSection />
-      <ParallaxSection />
-      <BlogSection />
+      <!-- <HeroTest /> -->
       <CheckPrice />
-      <ContactUs />
-      <DevFooter />
+      <OurServices />
+      <WhyUs />
     </div>
   </div>
 </template>

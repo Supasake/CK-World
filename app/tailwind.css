@@ -1,61 +1,106 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
 @plugin "daisyui" {
   themes:
-    lemonade --preferslight,
-    coffee --prefersdark,
-    aqua --default;
-  logs: true;
+    bumblebee --default,
+    corporate --prefersdark;
+  logs: false;
 }
 
 html {
   @apply scroll-smooth;
+  font-family: 'Bai Jamjuree', sans-serif;
+  font-weight: 200;
+  font-style: normal;
 }
 
-.bounded {
-  @apply mx-auto xl:mr-0 max-w-[60ch] xl:max-w-2/5 px-8 xl:px-4 py-16;
+h1 {
+  font-family: 'Prompt', sans-serif;
 }
 
-.rich-text {
-  & > h1 {
-    @apply text-[max(3rem,5vw)] leading-none;
-  }
-
-  & > h2 {
-    @apply text-[max(1.875rem,2.5vw)] leading-none;
-  }
-
-  & > h3 {
-    @apply text-[max(1.25rem,1.25vw)] leading-none;
-
-    &:not(:first-child) {
-      @apply mt-16;
-    }
-  }
-
-  & > p,
-  & > ul,
-  & > ul > li,
-  & > dl {
-    @apply max-w-[45ch] hyphens-auto;
-
-    &:not(:first-child) {
-      @apply mt-4;
-    }
-  }
-
-  & > dl > div {
-    @apply flex justify-between;
-  }
-
-  & > p,
-  & > dl,
-  & li {
-    & > a {
-      @apply underline focus:outline-none focus:bg-black focus:text-white;
-    }
-  }
+/* Footer */
+footer {
+  padding: 3rem 5% 1.5rem;
 }
 
-.stroked-text {
-  -webkit-text-stroke: 0.3px #ffffff;
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
 }
+
+.footer-brand h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.footer-brand h3 span {
+  color: var(--primary);
+}
+
+.footer-brand p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.social-link:hover {
+  background: var(--primary);
+  transform: translateY(-3px);
+}
+
+.footer-column h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--primary);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* END Footer */

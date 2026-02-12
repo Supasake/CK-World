@@ -1,12 +1,12 @@
 <template>
   <ClientOnly>
     <section
-      class="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 mx-auto max-w-full px-5 md:px-32"
+      class="py-8 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mx-auto max-w-full px-4 md:px-20"
     >
       <div
         v-for="(item, index) in services"
         :key="index"
-        class="service__item group relative overflow-hidden rounded-3xl h-[320px] sm:h-[380px] lg:h-[420px] cursor-pointer"
+        class="service__item group relative overflow-hidden rounded-2xl h-64 sm:h-72 lg:h-80 cursor-pointer"
       >
         <!-- Background image (parallax hover) -->
         <div
@@ -21,22 +21,22 @@
 
         <!-- Content -->
         <div
-          class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-white px-6 transition-transform duration-500 group-hover:-translate-y-2"
+          class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-white px-4 transition-transform duration-500 group-hover:-translate-y-2"
         >
           <!-- Icon with circle -->
           <div
-            class="mb-5 flex items-center justify-center w-16 h-16 rounded-full bg-white/15 backdrop-blur ring-1 ring-white/30"
+            class="mb-3 flex items-center justify-center w-12 h-12 rounded-full bg-white/15 backdrop-blur ring-1 ring-white/30"
           >
-            <Icon :name="item.icon" size="35" />
+            <Icon :name="item.icon" size="28" />
           </div>
 
           <!-- Title -->
-          <h3 class="text-xl font-semibold mb-3">
+          <h3 class="text-base sm:text-lg font-semibold mb-2">
             {{ item.title }}
           </h3>
 
           <!-- Description (longer) -->
-          <p class="text-sm leading-relaxed opacity-90 max-w-sm">
+          <p class="text-xs sm:text-sm leading-relaxed opacity-90 max-w-xs line-clamp-3">
             {{ item.desc }}
           </p>
         </div>
@@ -48,37 +48,37 @@
 <script setup lang="ts">
 const services = [
   {
-    url: "https://cdn.pixabay.com/photo/2017/12/15/22/25/hamburg-3021820_960_720.jpg",
-    title: "Global Shipping Solutions",
-    icon: "carbon:airport-01",
-    desc: "We provide comprehensive international shipping services designed to move your goods safely and efficiently across borders, supported by a reliable global logistics network and experienced professionals.",
+    url: 'https://cdn.pixabay.com/photo/2017/12/15/22/25/hamburg-3021820_960_720.jpg',
+    title: 'Global Shipping Solutions',
+    icon: 'carbon:airport-01',
+    desc: 'We provide comprehensive international shipping services designed to move your goods safely and efficiently across borders, supported by a reliable global logistics network and experienced professionals.',
   },
   {
-    url: "https://cdn.pixabay.com/photo/2018/01/26/20/54/crane-3109757_1280.jpg",
-    title: "Professional Cargo Handling",
-    icon: "carbon:agriculture-analytics",
-    desc: "Our cargo handling services ensure that every shipment is carefully managed, securely packed, and handled with precision, minimizing risk while maximizing efficiency throughout the supply chain.",
+    url: 'https://cdn.pixabay.com/photo/2018/01/26/20/54/crane-3109757_1280.jpg',
+    title: 'Professional Cargo Handling',
+    icon: 'carbon:agriculture-analytics',
+    desc: 'Our cargo handling services ensure that every shipment is carefully managed, securely packed, and handled with precision, minimizing risk while maximizing efficiency throughout the supply chain.',
   },
   {
-    url: "https://cdn.pixabay.com/photo/2016/08/03/14/41/model-planes-1566822_1280.jpg",
-    title: "Reliable On-Time Delivery",
-    icon: "carbon:category-new-each",
-    desc: "With a strong commitment to punctuality, we guarantee timely delivery through optimized routing, real-time tracking, and proactive coordination to meet your business deadlines without compromise.",
+    url: 'https://cdn.pixabay.com/photo/2016/08/03/14/41/model-planes-1566822_1280.jpg',
+    title: 'Reliable On-Time Delivery',
+    icon: 'carbon:category-new-each',
+    desc: 'With a strong commitment to punctuality, we guarantee timely delivery through optimized routing, real-time tracking, and proactive coordination to meet your business deadlines without compromise.',
   },
-];
+]
 
 onMounted(async () => {
-  const ScrollReveal = (await import("scrollreveal")).default;
+  const ScrollReveal = (await import('scrollreveal')).default
 
-  ScrollReveal().reveal(".service__item", {
-    origin: "bottom",
-    distance: "40px",
+  ScrollReveal().reveal('.service__item', {
+    origin: 'bottom',
+    distance: '40px',
     duration: 1200,
-    easing: "ease-out",
+    easing: 'ease-out',
     interval: 250,
     opacity: 0,
     scale: 0.95,
     reset: false,
-  });
-});
+  })
+})
 </script>

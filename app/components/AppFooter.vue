@@ -1,103 +1,282 @@
 <template>
+  <!-- Main Footer -->
   <footer
-    class="footer flex-col sm:footer-horizontal bg-base-200 text-base-content p-10"
+    class="relative bg-linear-to-br from-base-200 via-base-200 to-base-300 text-base-content overflow-hidden"
   >
-    <div class="flex">
-      <aside class="w-full min-w-[30%]">
-        <svg
-          width="50"
-          height="50"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-          fill-rule="evenodd"
-          clip-rule="evenodd"
-          class="fill-current"
-        >
-          <path
-            d="M22.672 15.226l-2.432.811.841 2.515c.33 1.019-.209 2.127-1.23 2.456-1.15.325-2.148-.321-2.463-1.226l-.84-2.518-5.013 1.677.84 2.517c.391 1.203-.434 2.542-1.831 2.542-.88 0-1.601-.564-1.86-1.314l-.842-2.516-2.431.809c-1.135.328-2.145-.317-2.463-1.229-.329-1.018.211-2.127 1.231-2.456l2.432-.809-1.621-4.823-2.432.808c-1.355.384-2.558-.59-2.558-1.839 0-.817.509-1.582 1.327-1.846l2.433-.809-.842-2.515c-.33-1.02.211-2.129 1.232-2.458 1.02-.329 2.13.209 2.461 1.229l.842 2.515 5.011-1.677-.839-2.517c-.403-1.238.484-2.553 1.843-2.553.819 0 1.585.509 1.85 1.326l.841 2.517 2.431-.81c1.02-.33 2.131.211 2.461 1.229.332 1.018-.21 2.126-1.23 2.456l-2.433.809 1.622 4.823 2.433-.809c1.242-.401 2.557.484 2.557 1.838 0 .819-.51 1.583-1.328 1.847m-8.992-6.428l-5.01 1.675 1.619 4.828 5.011-1.674-1.62-4.829z"
-          />
-        </svg>
-        <p>
-          <span class="text-3xl"> CK World</span>
-          <br />
-          {{ $t("welcome_subtitle") }}
-        </p>
-      </aside>
-      <!-- <nav>
-      <h6 class="footer-title">Services</h6>
-      <a class="link link-hover">Branding</a>
-      <a class="link link-hover">Design</a>
-      <a class="link link-hover">Marketing</a>
-      <a class="link link-hover">Advertisement</a>
-    </nav> -->
-      <nav>
-        <h6 class="footer-title">Company</h6>
-        <a class="link link-hover">About us</a>
-        <a class="link link-hover">Contact</a>
-        <a class="link link-hover">Jobs</a>
-        <a class="link link-hover">Press kit</a>
-      </nav>
-      <!-- <nav>
-      <h6 class="footer-title">Legal</h6>
-      <a class="link link-hover">Terms of use</a>
-      <a class="link link-hover">Privacy policy</a>
-      <a class="link link-hover">Cookie policy</a>
-    </nav> -->
-      <nav>
-        <h6 class="footer-title">Social</h6>
-        <div class="grid grid-flow-col gap-4">
-          <a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              class="fill-current"
-            >
-              <path
-                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
-              />
-            </svg>
-          </a>
-          <a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              class="fill-current"
-            >
-              <path
-                d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
-              />
-            </svg>
-          </a>
-          <a>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              class="fill-current"
-            >
-              <path
-                d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"
-              />
-            </svg>
-          </a>
-        </div>
-      </nav>
+    <!-- Decorative Background -->
+    <div class="absolute inset-0 opacity-5">
+      <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+            <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+      </svg>
     </div>
 
-    <aside>
-      <p>
-        Copyright © {{ new Date().getFullYear() }} - All right reserved by ACME
-        Industries Ltd
-      </p>
-    </aside>
+    <div class="relative container mx-auto px-6 py-16 lg:py-20">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+        <!-- Brand Section -->
+        <aside class="lg:col-span-5 space-y-6">
+          <!-- Logo -->
+          <div class="transform transition-transform duration-300 hover:scale-105">
+            <svg
+              width="200"
+              height="90"
+              viewBox="0 0 200 90"
+              xmlns="http://www.w3.org/2000/svg"
+              class="fill-current text-primary drop-shadow-lg"
+            >
+              <!-- Enhanced C -->
+              <path
+                d="M45 12
+                C22 12 10 24 10 35
+                C10 46 22 58 45 58
+                L45 50
+                C28 50 20 42 20 35
+                C20 28 28 20 45 20
+                Z"
+              />
+
+              <!-- Enhanced K -->
+              <path d="M60 12 H70 V35 L90 12 H103 L80 37 L103 58 H90 L70 40 V58 H60 Z" />
+
+              <!-- WORLD text -->
+              <text
+                x="60"
+                y="78"
+                font-size="16"
+                letter-spacing="5"
+                font-family="system-ui, -apple-system, sans-serif"
+                font-weight="600"
+                class="fill-current"
+              >
+                WORLD
+              </text>
+            </svg>
+          </div>
+
+          <!-- Tagline -->
+          <div class="space-y-2">
+            <p class="text-accent text-sm font-semibold tracking-wider uppercase">
+              Logistics & Freight Forwarding
+            </p>
+            <p class="text-base-content/70 text-base max-w-md leading-relaxed">
+              {{ $t('welcome_subtitle') }}
+            </p>
+          </div>
+
+          <!-- Contact Info (Optional) -->
+          <div class="flex flex-wrap gap-4 pt-4">
+            <a
+              href="mailto:info@ckworld.com"
+              class="text-sm text-base-content/60 hover:text-primary transition-colors duration-200 flex items-center gap-2"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              contact@company.com
+            </a>
+            <a
+              href="tel:+1234567890"
+              class="text-sm text-base-content/60 hover:text-primary transition-colors duration-200 flex items-center gap-2"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              +66 123-4567
+            </a>
+          </div>
+        </aside>
+        <!-- Links Section -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+          <!-- Our Services -->
+          <nav class="space-y-4">
+            <h6
+              class="text-base font-bold text-base-content mb-4 pb-2 border-b-2 border-primary/20"
+            >
+              Our Services
+            </h6>
+            <ul class="space-y-3">
+              <li v-for="item in items" :key="item.label">
+                <NuxtLink
+                  :to="item.to"
+                  class="group inline-flex items-center text-sm text-base-content/70 hover:text-primary transition-all duration-200"
+                >
+                  <span
+                    class="w-0 group-hover:w-2 h-0.5 bg-primary transition-all duration-200 mr-0 group-hover:mr-2"
+                  />
+                  {{ item.label }}
+                </NuxtLink>
+              </li>
+            </ul>
+          </nav>
+          <!-- Quick Links (Placeholder for future use) -->
+          <nav class="space-y-4">
+            <h6
+              class="text-base font-bold text-base-content mb-4 pb-2 border-b-2 border-primary/20"
+            >
+              Company
+            </h6>
+            <ul class="space-y-3">
+              <li>
+                <NuxtLink
+                  to="/contact_us"
+                  class="group inline-flex items-center text-sm text-base-content/70 hover:text-primary transition-all duration-200"
+                >
+                  <span
+                    class="w-0 group-hover:w-2 h-0.5 bg-primary transition-all duration-200 mr-0 group-hover:mr-2"
+                  />
+                  Contact Us
+                </NuxtLink>
+              </li>
+              <li>
+                <NuxtLink
+                  :to="{ path: '/', hash: '#why_us' }"
+                  class="group inline-flex items-center text-sm text-base-content/70 hover:text-primary transition-all duration-200"
+                >
+                  <span
+                    class="w-0 group-hover:w-2 h-0.5 bg-primary transition-all duration-200 mr-0 group-hover:mr-2"
+                  />
+                  Why CK World
+                </NuxtLink>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Social & Community -->
+          <nav class="space-y-4">
+            <h6
+              class="text-base font-bold text-base-content mb-4 pb-2 border-b-2 border-primary/20"
+            >
+              Connect With Us
+            </h6>
+            <p class="text-sm text-base-content/60 mb-4">Follow us on social media for updates</p>
+            <div class="flex gap-3">
+              <!-- LINE APPLICATION -->
+              <a
+                href="#"
+                class="group p-3 rounded-lg bg-accent hover:bg-[#03C755] hover:scale-110 transition-all duration-300 shadow-sm hover:shadow-md"
+              >
+                <svg
+                  aria-label="Line logo"
+                  width="20"
+                  height="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                >
+                  <g fill-rule="evenodd" stroke-linejoin="round" fill="white">
+                    <path
+                      fill-rule="nonzero"
+                      d="M12.91 6.57c.232 0 .42.19.42.42 0 .23-.188.42-.42.42h-1.17v.75h1.17a.42.42 0 1 1 0 .84h-1.59a.42.42 0 0 1-.418-.42V5.4c0-.23.188-.42.42-.42h1.59a.42.42 0 0 1-.002.84h-1.17v.75h1.17zm-2.57 2.01a.421.421 0 0 1-.757.251l-1.63-2.217V8.58a.42.42 0 0 1-.42.42.42.42 0 0 1-.418-.42V5.4a.418.418 0 0 1 .755-.249L9.5 7.366V5.4c0-.23.188-.42.42-.42.23 0 .42.19.42.42v3.18zm-3.828 0c0 .23-.188.42-.42.42a.42.42 0 0 1-.418-.42V5.4c0-.23.188-.42.42-.42.23 0 .418.19.418.42v3.18zM4.868 9h-1.59c-.23 0-.42-.19-.42-.42V5.4c0-.23.19-.42.42-.42.232 0 .42.19.42.42v2.76h1.17a.42.42 0 1 1 0 .84M16 6.87C16 3.29 12.41.376 8 .376S0 3.29 0 6.87c0 3.208 2.846 5.896 6.69 6.405.26.056.615.172.705.394.08.2.053.518.026.722 0 0-.092.565-.113.685-.035.203-.16.79.693.432.854-.36 4.607-2.714 6.285-4.646C15.445 9.594 16 8.302 16 6.87"
+                    />
+                  </g>
+                </svg>
+              </a>
+              <!-- FACEBOOK -->
+              <a
+                href="#"
+                class="group p-3 rounded-lg bg-accent hover:bg-[#1A77F2] hover:scale-110 transition-all duration-300 shadow-sm hover:shadow-md"
+                aria-label="Facebook"
+              >
+                <svg
+                  aria-label="Facebook logo"
+                  width="20"
+                  height="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    fill="white"
+                    d="M8 12h5V8c0-6 4-7 11-6v5c-4 0-5 0-5 3v2h5l-1 6h-4v12h-6V18H8z"
+                  />
+                </svg>
+              </a>
+              <!-- X -->
+              <a
+                href="#"
+                class="group p-3 rounded-lg text-white bg-accent hover:text-white hover:bg-black hover:scale-110 transition-all duration-300 shadow-sm hover:shadow-md"
+                aria-label="LinkedIn"
+              >
+                <svg
+                  aria-label="X logo"
+                  width="20"
+                  height="16"
+                  viewBox="0 0 300 271"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill="currentColor"
+                    d="m236 0h46l-101 115 118 156h-92.6l-72.5-94.8-83 94.8h-46l107-123-113-148h94.9l65.5 86.6zm-16.1 244h25.5l-165-218h-27.4z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Copyright Bar -->
+  <footer class="bg-base-300 border-t border-base-content/10">
+    <div class="container mx-auto px-6 py-0">
+      <div
+        class="flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-base-content/60"
+      >
+        <p class="text-center sm:text-left">
+          Copyright © {{ new Date().getFullYear() }}
+          <span class="text-primary font-semibold">CK World</span>. All rights reserved.
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-3 lg:gap-6">
+          <a href="#" class="hover:text-primary transition-colors duration-200">Privacy Policy</a>
+          <span class="hidden sm:inline text-base-content/30">•</span>
+          <a href="#" class="hover:text-primary transition-colors duration-200">Terms of Service</a>
+          <span class="hidden sm:inline text-base-content/30">•</span>
+          <a href="#" class="hover:text-primary transition-colors duration-200">Cookie Policy</a>
+        </div>
+      </div>
+    </div>
   </footer>
 </template>
 
-<script setup></script>
+<script setup>
+const items = [
+  {
+    label: 'Check Price',
+    to: { path: '/', hash: '#check_price' },
+  },
+  { label: 'Features', to: { path: '/', hash: '#services' } },
+]
+</script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+/* Additional custom animations if needed */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: Add smooth scroll behavior */
+a[href^='#'] {
+  scroll-behavior: smooth;
+}
+</style>

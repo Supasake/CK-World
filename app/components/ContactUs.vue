@@ -1,5 +1,5 @@
 <template>
-  <div id="contact_us">
+  <div>
     <section class="py-8 px-4 max-w-7xl mx-auto">
       <!-- Header -->
       <div class="text-center my-12">
@@ -11,16 +11,13 @@
           Get in Touch
         </p>
         <p class="mt-6 text-secondary-content max-w-2xl mx-auto">
-          Our team is ready to assist you with innovative solutions and
-          strategic partnerships
+          Our team is ready to assist you with innovative solutions and strategic partnerships
         </p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
         <!-- Left: Contact Information -->
         <div class="space-y-8">
-          <h2 class="text-2xl font-semibold text-primary underline">
-            Contact Information
-          </h2>
+          <h2 class="text-2xl font-semibold text-primary underline">Contact Information</h2>
 
           <div class="grid xl:grid-cols-[3fr_2fr] gap-5">
             <!-- ALL Contact Information -->
@@ -110,9 +107,7 @@
 
         <!-- Right: Send a Message Form -->
         <div class="bg-neutral-content rounded-3xl p-8 shadow-sm">
-          <h2 class="text-2xl font-semibold text-primary-content mb-6">
-            Send a Message
-          </h2>
+          <h2 class="text-2xl font-semibold text-primary-content mb-6">Send a Message</h2>
 
           <form
             ref="ContactUsForm"
@@ -121,18 +116,14 @@
           >
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <fieldset class="fieldset">
-                <label class="label text-gray-700 font-medium"
-                  >First Name</label
-                >
+                <label class="label text-gray-700 font-medium">First Name</label>
                 <input
                   v-model="contactUs.first_name"
                   type="text"
                   class="input validator text-primary text-center"
                   required
                 />
-                <p
-                  class="validator-hint hidden text-sm m-0 bg-warning-content text-center"
-                >
+                <p class="validator-hint hidden text-sm m-0 bg-warning-content text-center">
                   Required
                 </p>
               </fieldset>
@@ -144,34 +135,26 @@
                   class="input validator text-primary text-center"
                   required
                 />
-                <p
-                  class="validator-hint hidden text-sm m-0 bg-warning-content text-center"
-                >
+                <p class="validator-hint hidden text-sm m-0 bg-warning-content text-center">
                   Required
                 </p>
               </fieldset>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <fieldset class="fieldset">
-                <label class="label text-gray-700 font-medium"
-                  >Email Address</label
-                >
+                <label class="label text-gray-700 font-medium">Email Address</label>
                 <input
                   v-model="contactUs.email"
                   type="email"
                   class="input validator text-primary text-center"
                   required
                 />
-                <p
-                  class="validator-hint hidden text-sm m-0 bg-warning-content text-center"
-                >
+                <p class="validator-hint hidden text-sm m-0 bg-warning-content text-center">
                   Required
                 </p>
               </fieldset>
               <fieldset class="fieldset">
-                <label class="label text-gray-700 font-medium"
-                  >Phone Number</label
-                >
+                <label class="label text-gray-700 font-medium">Phone Number</label>
                 <input
                   v-model="contactUs.phone"
                   class="input validator text-primary text-center"
@@ -181,17 +164,13 @@
                   minlength="10"
                   maxlength="10"
                 />
-                <p
-                  class="validator-hint hidden text-sm m-0 bg-warning-content text-center"
-                >
+                <p class="validator-hint hidden text-sm m-0 bg-warning-content text-center">
                   Required
                 </p>
               </fieldset>
             </div>
             <fieldset class="fieldset m-0">
-              <legend class="fieldset-legend text-gray-700 font-medium">
-                Inquiry Type
-              </legend>
+              <legend class="fieldset-legend text-gray-700 font-medium">Inquiry Type</legend>
               <select
                 v-model="contactUs.inquiry_type"
                 class="select text-primary text-center validator"
@@ -201,9 +180,7 @@
               </select>
             </fieldset>
             <fieldset class="fieldset">
-              <legend class="fieldset-legend text-gray-700 font-medium">
-                Message
-              </legend>
+              <legend class="fieldset-legend text-gray-700 font-medium">Message</legend>
               <textarea
                 v-model="contactUs.message"
                 class="textarea h-24 text-primary validator"
@@ -212,9 +189,7 @@
                 maxlength="500"
                 required
               />
-              <p
-                class="validator-hint hidden text-sm m-0 bg-warning-content text-center"
-              >
+              <p class="validator-hint hidden text-sm m-0 bg-warning-content text-center">
                 Required
               </p>
             </fieldset>
@@ -235,19 +210,19 @@
 </template>
 
 <script setup>
-const ContactUsForm = ref(null);
+const ContactUsForm = ref(null)
 const contactUs = reactive({
-  first_name: "",
-  last_name: "",
-  email: "",
-  phone: "",
-  inquiry_type: "general_inquiry",
-  message: "",
-});
+  first_name: '',
+  last_name: '',
+  email: '',
+  phone: '',
+  inquiry_type: 'general_inquiry',
+  message: '',
+})
 
 function Send_Message() {
-  window.alert(`Message Sent!\n\nYour message:\n"${contactUs.message}"`);
-  ContactUsForm.value.reset();
+  window.alert(`Message Sent!\n\nYour message:\n"${contactUs.message}"`)
+  ContactUsForm.value.reset()
 }
 </script>
 

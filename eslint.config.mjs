@@ -1,8 +1,12 @@
 // @ts-check
-import withNuxt from "./.nuxt/eslint.config.mjs";
+import withNuxt from './.nuxt/eslint.config.mjs'
+import eslintConfigPrettier from 'eslint-config-prettier'
 
-export default withNuxt({
-  rules: {
-    "no-console": ["error"],
+export default withNuxt(
+  {
+    rules: {
+      'no-console': ['error'],
+    },
   },
-});
+  eslintConfigPrettier
+)
